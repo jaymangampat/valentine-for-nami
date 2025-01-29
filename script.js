@@ -11,15 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
         noButton.style.top = `${y}px`;
     }
 
-    // Desktop: Move when hovered
+    // Ensure the "No" button always moves when tapped
     noButton.addEventListener("mouseover", moveNoButton);
-
-    // Mobile: Move when touched
     noButton.addEventListener("touchstart", function (event) {
-        event.preventDefault(); // Prevent accidental taps
+        event.preventDefault(); // Prevents weird behavior on mobile
         moveNoButton();
     });
 
+    // Show the response when "Yes" is clicked
     yesButton.addEventListener("click", function () {
         response.classList.remove("hidden");
     });
