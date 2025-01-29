@@ -4,11 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const response = document.getElementById("response");
 
     noButton.addEventListener("mouseover", function () {
+        moveNoButton();
+    });
+
+    function moveNoButton() {
         const x = Math.random() * (window.innerWidth - 100);
         const y = Math.random() * (window.innerHeight - 100);
         noButton.style.left = `${x}px`;
         noButton.style.top = `${y}px`;
-    });
+    }
 
     yesButton.addEventListener("click", function () {
         response.classList.remove("hidden");
