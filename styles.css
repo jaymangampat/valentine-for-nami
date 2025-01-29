@@ -1,7 +1,8 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #ffcccc;
+    background: linear-gradient(120deg, #ffcccc, #ff99cc);
+    overflow: hidden;
 }
 
 .container {
@@ -9,8 +10,14 @@ body {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #ff4d6d;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .buttons {
@@ -18,22 +25,24 @@ h1 {
 }
 
 button {
-    font-size: 1.2em;
-    padding: 10px 20px;
+    font-size: 1.5em;
+    padding: 12px 25px;
     margin: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 #yesButton {
     background-color: #ff4d6d;
     color: white;
+    font-weight: bold;
 }
 
 #yesButton:hover {
     background-color: #ff1a40;
+    transform: scale(1.1);
 }
 
 #noButton {
@@ -44,7 +53,21 @@ button {
 
 .hidden {
     display: none;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #ff1a40;
     margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Floating hearts animation */
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    animation: floatUp 4s linear infinite;
 }
