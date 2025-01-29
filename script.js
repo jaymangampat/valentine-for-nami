@@ -24,6 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
         createHearts();
         loveSong.play(); // Play music when she says "Yes"
         loveSong.volume = 0.5; // Adjust volume if needed
+
+        // Display a short lyric after "Yes"
+        const lyric = document.createElement("p");
+        lyric.classList.add("lyric");
+        lyric.innerText = "I like me better when I'm with you 💖";
+        document.body.appendChild(lyric);
+        setTimeout(() => lyric.remove(), 5000); // Remove after 5 seconds
     });
 
     function createHearts() {
