@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #ffcccc;
+}
+
+.container {
+    margin-top: 20vh;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ff4d6d;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesButton {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#yesButton:hover {
+    background-color: #ff1a40;
+}
+
+#noButton {
+    background-color: #cccccc;
+    color: white;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+    font-size: 1.5em;
+    color: #ff1a40;
+    margin-top: 20px;
+}
