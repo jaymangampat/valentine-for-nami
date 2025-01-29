@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         lyric.classList.add("lyric");
         lyric.innerText = "I like me better when I'm with you 💖"; // Short lyric
         document.body.appendChild(lyric); // Add the lyric to the body
-        setTimeout(() => lyric.remove(), 5000); // Remove lyric after 5 seconds
     });
 
     function createHearts() {
