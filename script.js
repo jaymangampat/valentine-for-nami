@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
     yesButton.addEventListener("click", function () {
         response.classList.remove("hidden");
         createHearts();
-        loveSong.play(); // Play music when she says "Yes"
+        loveSong.play(); // Play music when she clicks "Yes"
         loveSong.volume = 0.5; // Adjust volume if needed
 
-        // Display a short lyric after "Yes"
+        // Display the lyric after "Yes"
         const lyric = document.createElement("p");
         lyric.classList.add("lyric");
         lyric.innerText = "I like me better when I'm with you 💖";
         document.body.appendChild(lyric);
-        setTimeout(() => lyric.remove(), 5000); // Remove after 5 seconds
+        setTimeout(() => lyric.remove(), 5000); // Remove lyric after 5 seconds
     });
 
     function createHearts() {
