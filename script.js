@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const yesButton = document.getElementById("yesButton");
     const response = document.getElementById("response");
     const heartsContainer = document.getElementById("hearts-container");
+    const loveSong = document.getElementById("loveSong");
 
     function moveNoButton() {
         const x = Math.random() * (window.innerWidth - 100);
@@ -21,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     yesButton.addEventListener("click", function () {
         response.classList.remove("hidden");
         createHearts();
+        loveSong.play(); // Play music when she says "Yes"
+        loveSong.volume = 0.5; // Adjust volume if needed
     });
 
     function createHearts() {
